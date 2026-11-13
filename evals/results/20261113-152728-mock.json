@@ -1,0 +1,227 @@
+{
+  "timestamp": "2026-11-13T15:27:28",
+  "backend": "mock",
+  "data": "attractions_sjz.json",
+  "dataset": "dataset.json",
+  "dataset_version": "2026.11.13",
+  "prompt_version": "2026.11.13",
+  "embedding": {
+    "embedding": "MockEmbedding",
+    "dim": 1536,
+    "chunks": 3276,
+    "degraded": true,
+    "degraded_reason": "MockEmbedding 非语义向量，仅用于链路验证与回归对比"
+  },
+  "totals": {
+    "recall@5": 0.6083,
+    "recall@10": 0.8083,
+    "no_result_rate": 0.0,
+    "wrong_district_rate": 0.0,
+    "excluded_hit_rate": 0.0,
+    "latency_avg_ms": 48.55,
+    "latency_p95_ms": 64.56,
+    "cases": 8
+  },
+  "cases": [
+    {
+      "id": "q1",
+      "query": "正定 古城 历史文化 寺庙",
+      "filters": {
+        "district": "正定县"
+      },
+      "recall@5": 0.2,
+      "recall@10": 0.8,
+      "retrieved": [
+        "正定南门广场",
+        "明曦湖",
+        "音乐喷泉",
+        "音乐喷泉",
+        "隆兴寺",
+        "荣国府",
+        "滹沱河艺术生态岛",
+        "森林河趣那主题公园",
+        "赵云庙",
+        "开元寺"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 51.49,
+      "error": null
+    },
+    {
+      "id": "q2",
+      "query": "赵县 古桥 禅寺 历史",
+      "filters": {
+        "district": "赵县"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "赵县豆腐庄惨案纪念馆",
+        "柴王推车",
+        "赵州桥景区",
+        "柏林禅寺",
+        "赵州桥古镇",
+        "陀罗尼经幢",
+        "永通桥公园",
+        "柏林广场",
+        "澄波公园",
+        "古城墙遗址园"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 29.04,
+      "error": null
+    },
+    {
+      "id": "q3",
+      "query": "井陉 苍岩山 山岳 古寺",
+      "filters": {
+        "district": "井陉县"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "百泉湾湿地公园",
+        "金色时光公园",
+        "许总兵府",
+        "苍岩山风景名胜区",
+        "苍岩山桥楼殿",
+        "苍岩山龙岩寺",
+        "苍岩山风景名胜区-玉皇顶",
+        "苍岩山索道",
+        "苍岩山-銮台垴景区",
+        "苍岩山风景名胜区-銮台寺"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 55.18,
+      "error": null
+    },
+    {
+      "id": "q4",
+      "query": "鹿泉 抱犊寨 登山 自然",
+      "filters": {
+        "district": "鹿泉区"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "西部长青德明古镇",
+        "西部长青森林康养城",
+        "抱犊寨风景区",
+        "抱犊寨风景区-南天门",
+        "抱犊寨风景区-登山步道",
+        "君乐宝阳光草坪",
+        "抱犊寨风景区-万佛洞",
+        "抱犊寨风景区-北天门",
+        "花田原乡小镇多彩花海",
+        "抱犊寨乐动梦幻园"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 51.74,
+      "error": null
+    },
+    {
+      "id": "q5",
+      "query": "平山 西柏坡 红色旅游 革命旧址",
+      "filters": {
+        "district": "平山县"
+      },
+      "recall@5": 0.6667,
+      "recall@10": 0.6667,
+      "retrieved": [
+        "平山",
+        "林山石窟",
+        "驼梁风景区",
+        "西柏坡纪念馆",
+        "西柏坡景区",
+        "平山红崖谷景区",
+        "黄金寨原生态旅游区",
+        "沕沕水生态风景区",
+        "石家庄天桂山风景名胜区",
+        "岗南水库"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 64.56,
+      "error": null
+    },
+    {
+      "id": "q6",
+      "query": "灵寿 自然风光 山水 五岳寨",
+      "filters": {
+        "district": "灵寿县"
+      },
+      "recall@5": 0.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "中山公园",
+        "福泽人文纪念园",
+        "人民广场",
+        "福泽园公墓",
+        "灵山寺",
+        "森林公园",
+        "漫山花溪谷-观光车始发站",
+        "五岳寨",
+        "纪信台三清观",
+        "陈庄战役纪念碑"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 37.35,
+      "error": null
+    },
+    {
+      "id": "q7",
+      "query": "石家庄 市区 公园 亲子 休闲",
+      "filters": {
+        "district": "裕华区"
+      },
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "retrieved": [
+        "河北科技大学图书馆",
+        "火炬广场",
+        "城市之心",
+        "观宸公园",
+        "欧韵公园",
+        "石门公园",
+        "槐北公园",
+        "八匹马雕像",
+        "丁香园",
+        "石家庄东站前广场"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 59.15,
+      "error": null
+    },
+    {
+      "id": "q8",
+      "query": "元氏 封龙山 风景区 登山",
+      "filters": {
+        "district": "元氏县"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "五一广场管理服务中心",
+        "蟠龙湖景区",
+        "封龙山风景区",
+        "元氏县铁过门72拐",
+        "封龙书院",
+        "大鱼码头",
+        "万花山森林公园",
+        "元氏公园",
+        "汉风小镇",
+        "常山广场"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 39.87,
+      "error": null
+    }
+  ]
+}

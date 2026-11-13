@@ -1,0 +1,228 @@
+{
+  "timestamp": "2026-11-13T17:46:26",
+  "backend": "local",
+  "data": "attractions_sjz.json",
+  "dataset": "dataset.json",
+  "dataset_version": "2026.11.13",
+  "match": "contains",
+  "prompt_version": "2026.11.13",
+  "embedding": {
+    "embedding": "fastembed:BAAI/bge-small-zh-v1.5",
+    "dim": 512,
+    "chunks": 3276,
+    "degraded": false,
+    "degraded_reason": null
+  },
+  "totals": {
+    "recall@5": 0.6708,
+    "recall@10": 0.7958,
+    "no_result_rate": 0.0,
+    "wrong_district_rate": 0.0,
+    "excluded_hit_rate": 0.0,
+    "latency_avg_ms": 69.64,
+    "latency_p95_ms": 96.16,
+    "cases": 8
+  },
+  "cases": [
+    {
+      "id": "q1",
+      "query": "正定 古城 历史文化 寺庙",
+      "filters": {
+        "district": "正定县"
+      },
+      "recall@5": 0.2,
+      "recall@10": 0.2,
+      "retrieved": [
+        "正定古城",
+        "正定县城隍(大寺前街东)",
+        "王古寺文化广场",
+        "正定古城南区",
+        "正定古城南城墙-观景台",
+        "正定县文庙-大成殿",
+        "正定城墙博物馆",
+        "正定古城-镇远门",
+        "正定古城北城门",
+        "正定古城城墙-东南角台"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 81.2,
+      "error": null
+    },
+    {
+      "id": "q2",
+      "query": "赵县 古桥 禅寺 历史",
+      "filters": {
+        "district": "赵县"
+      },
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "retrieved": [
+        "赵州桥古镇",
+        "古桥亭",
+        "中国赵州桥-古翠亭",
+        "赵州桥景区",
+        "古桥展览馆",
+        "赵州桥奇迹",
+        "赵州桥景区-民俗文化墙",
+        "赵州桥景区-亭",
+        "赵州桥乾隆碑题字",
+        "赵州桥景区-桥语"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 43.17,
+      "error": null
+    },
+    {
+      "id": "q3",
+      "query": "井陉 苍岩山 山岳 古寺",
+      "filters": {
+        "district": "井陉县"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "苍岩山风景名胜区-麓岩寺",
+        "苍岩山风景名胜区-卧佛寺",
+        "苍岩山风景名胜区",
+        "苍岩山龙岩寺",
+        "苍岩山风景名胜区-銮台寺",
+        "苍岩山风景名胜区-南天门",
+        "苍岩山索道",
+        "苍岩山-銮台垴景区",
+        "苍岩山风景名胜区-玉皇顶",
+        "苍山园"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 91.14,
+      "error": null
+    },
+    {
+      "id": "q4",
+      "query": "鹿泉 抱犊寨 登山 自然",
+      "filters": {
+        "district": "鹿泉区"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "抱犊寨风景区-登山步道",
+        "抱犊寨风景区",
+        "抱犊寨风景区-万佛洞",
+        "抱犊寨风景区-滑道",
+        "抱犊寨风景区滑道-下站",
+        "抱犊寨风景区-南天门",
+        "抱犊寨风景区-北天门",
+        "抱犊寨乐动梦幻园",
+        "谷家峪村登峰路",
+        "挂云山寨"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 66.98,
+      "error": null
+    },
+    {
+      "id": "q5",
+      "query": "平山 西柏坡 红色旅游 革命旧址",
+      "filters": {
+        "district": "平山县"
+      },
+      "recall@5": 0.6667,
+      "recall@10": 0.6667,
+      "retrieved": [
+        "西柏坡中共中央旧址",
+        "西柏坡中央部委旧址区",
+        "西柏坡纪念馆-毛泽东同志旧居",
+        "西柏坡纪念碑",
+        "西柏坡红色记忆馆",
+        "西柏坡中国人民解放军总部旧址",
+        "西柏坡廉政教育馆",
+        "西柏坡纪念馆",
+        "西柏坡中共中央旧址-拍照点",
+        "西柏坡纪念馆-全国土地会议会址"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 96.16,
+      "error": null
+    },
+    {
+      "id": "q6",
+      "query": "灵寿 自然风光 山水 五岳寨",
+      "filters": {
+        "district": "灵寿县"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "五岳寨",
+        "五岳松",
+        "五岳寨旅游区管理处",
+        "五岳寨国家森林公园",
+        "五岳寨主峰石碑",
+        "五岳寨风景区-观瀑亭",
+        "五岳寨风景区-观瀑台",
+        "五岳寨国家森林公园-银河峡",
+        "五灵山风景区",
+        "五岳寨国家森林公园-天梯"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 63.19,
+      "error": null
+    },
+    {
+      "id": "q7",
+      "query": "石家庄 市区 公园 亲子 休闲",
+      "filters": {
+        "district": "裕华区"
+      },
+      "recall@5": 0.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "石家庄市体育公园(二期)",
+        "石家庄市体育公园",
+        "石家庄体育公园(北园)",
+        "石家庄足球公园",
+        "石家庄环城绿道",
+        "石家庄东站前广场",
+        "石家庄消防主题公园",
+        "石家庄高新区退役军人主题公园",
+        "世纪公园-石家庄电视塔",
+        "石门公园"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 77.65,
+      "error": null
+    },
+    {
+      "id": "q8",
+      "query": "元氏 封龙山 风景区 登山",
+      "filters": {
+        "district": "元氏县"
+      },
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "retrieved": [
+        "封龙山风景区",
+        "封龙山皇姑院",
+        "封龙山山地运动公园",
+        "封龙书院",
+        "封龙书院藏书阁",
+        "青龙山景区",
+        "封龙书院讲堂",
+        "跨虎登山殿",
+        "天山龙湖世界",
+        "龙王殿"
+      ],
+      "excluded_hits": [],
+      "wrong_district": [],
+      "latency_ms": 37.65,
+      "error": null
+    }
+  ]
+}

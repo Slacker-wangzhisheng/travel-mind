@@ -1,0 +1,73 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-travelmind}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-travelmind}
+      POSTGRES_DB: ${POSTGRES_DB:-travelmind}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-travelmind}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-travelmind}:${POSTGRES_PASSWORD:-travelmind}@db:5432/${POSTGRES_DB:-travelmind}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.openai.com/v1}
+      LLM_MODEL: ${LLM_MODEL:-gpt-4o-mini}
+      EMBEDDING_BACKEND: ${EMBEDDING_BACKEND:-openai}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-text-embedding-3-small}
+      LOCAL_EMBEDDING_MODEL: ${LOCAL_EMBEDDING_MODEL:-BAAI/bge-small-zh-v1.5}
+      HF_ENDPOINT: ${HF_ENDPOINT:-}
+      AMAP_API_KEY: ${AMAP_API_KEY:-}
+      QWEATHER_API_KEY: ${QWEATHER_API_KEY:-}
+      QWEATHER_API_HOST: ${QWEATHER_API_HOST:-https://devapi.qweather.com}
+      ENABLE_MOCK: ${ENABLE_MOCK:-true}
+      VECTOR_DIM: ${VECTOR_DIM:-1536}
+      MULTI_AGENT_ENABLED: ${MULTI_AGENT_ENABLED:-true}
+      # 认证：必须提供随机密钥；生产建议 COOKIE_SECURE=true（HTTPS）
+      AUTH_SECRET: ${AUTH_SECRET:-}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      STORAGE_BACKEND: ${STORAGE_BACKEND:-db}
+      AUTO_CREATE_TABLES: ${AUTO_CREATE_TABLES:-true}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "uv", "run", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Vue 前端（表单 + 豆包式对话），Nginx 托管静态资源并反代 /api
+  web:
+    build: ./ui/web
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    depends_on:
+      - api
+
+  # 旧 Streamlit 前端（保留可选，默认不启动）
+  streamlit:
+    build: .
+    profiles: ["streamlit"]
+    command: uv run streamlit run ui/streamlit_app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true
+    environment:
+      API_BASE_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

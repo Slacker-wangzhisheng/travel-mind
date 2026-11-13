@@ -1,0 +1,79 @@
+[
+  {
+    "name": "西柏坡",
+    "level": "5A",
+    "price": 0,
+    "official_url": "http://xbpjng.cn/Index.aspx",
+    "note": "免费开放（来源：河北旅游资讯网，以景区官方为准）"
+  },
+  {
+    "name": "赵州桥",
+    "level": "4A",
+    "price": 0,
+    "official_url": null,
+    "note": "免门票（来源：石家庄市文旅局，以景区官方为准）"
+  },
+  {
+    "name": "华北军区烈士陵园",
+    "level": "4A",
+    "price": 0,
+    "official_url": null,
+    "note": "免费开放（来源：石家庄市文旅局，以景区官方为准）"
+  },
+  {
+    "name": "园博园",
+    "level": null,
+    "price": 0,
+    "official_url": null,
+    "note": "免门票通入园（来源：石家庄市文旅局，以景区官方为准）"
+  },
+  {
+    "name": "正定古城",
+    "level": "历史文化名城",
+    "price": 0,
+    "official_url": null,
+    "note": "古城街区免费开放，城内隆兴寺、荣国府等景点单独售票（以官方为准）"
+  },
+  {
+    "name": "隆兴寺",
+    "level": "4A",
+    "price": 50,
+    "official_url": null,
+    "note": "成人票 50 元（来源：石家庄本地宝，以景区官方为准）"
+  },
+  {
+    "name": "荣国府",
+    "level": "4A",
+    "price": 30,
+    "official_url": null,
+    "note": "成人票 30 元（来源：石家庄本地宝，以景区官方为准）"
+  },
+  {
+    "name": "苍岩山",
+    "level": "4A",
+    "price": 50,
+    "official_url": null,
+    "note": "门票 50 元（来源：河北旅游资讯网，以景区官方为准）"
+  },
+  {
+    "name": "抱犊寨",
+    "level": "4A",
+    "price": 40,
+    "official_url": "http://baoduzhai.com.cn/",
+    "note": "成人票参考价 40 元，旺季或调整（来源：石家庄本地宝，以景区官方公告为准）"
+  },
+  {
+    "name": "五岳寨",
+    "level": "4A",
+    "price": 65,
+    "official_url": null,
+    "note": "成人票参考价 65 元，存在分项票价（来源：石家庄本地宝，以购票页面为准）"
+  },
+  {
+    "name": "赵云庙",
+    "level": null,
+    "price": 20,
+    "official_url": null,
+    "note": "门票参考价约 20 元（来源：去哪儿，以景区官方为准）"
+  }
+]

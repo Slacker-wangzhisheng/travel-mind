@@ -1,0 +1,63 @@
+{
+  "version": "2026.11.13",
+  "city": "石家庄",
+  "notes": "relevant_attractions 为人工标注（依据 data/attractions_sjz.json 中的景点名称），使用前请逐条人工核对；excluded_attractions 为本次检索不应出现的景点。不要用模型输出自动充当标准答案。",
+  "cases": [
+    {
+      "id": "q1",
+      "query": "正定 古城 历史文化 寺庙",
+      "constraints": { "district": "正定县" },
+      "relevant_attractions": ["隆兴寺", "正定古城", "荣国府", "赵云庙", "开元寺"],
+      "excluded_attractions": ["柏林禅寺"]
+    },
+    {
+      "id": "q2",
+      "query": "赵县 古桥 禅寺 历史",
+      "constraints": { "district": "赵县" },
+      "relevant_attractions": ["赵州桥景区", "柏林禅寺"],
+      "excluded_attractions": ["隆兴寺"]
+    },
+    {
+      "id": "q3",
+      "query": "井陉 苍岩山 山岳 古寺",
+      "constraints": { "district": "井陉县" },
+      "relevant_attractions": ["苍岩山风景名胜区"],
+      "excluded_attractions": []
+    },
+    {
+      "id": "q4",
+      "query": "鹿泉 抱犊寨 登山 自然",
+      "constraints": { "district": "鹿泉区" },
+      "relevant_attractions": ["抱犊寨风景区"],
+      "excluded_attractions": []
+    },
+    {
+      "id": "q5",
+      "query": "平山 西柏坡 红色旅游 革命旧址",
+      "constraints": { "district": "平山县" },
+      "relevant_attractions": ["西柏坡纪念馆", "西柏坡景区", "西柏坡中共中央旧址"],
+      "excluded_attractions": ["赵州桥景区"]
+    },
+    {
+      "id": "q6",
+      "query": "灵寿 自然风光 山水 五岳寨",
+      "constraints": { "district": "灵寿县" },
+      "relevant_attractions": ["五岳寨"],
+      "excluded_attractions": []
+    },
+    {
+      "id": "q7",
+      "query": "石家庄 市区 公园 亲子 休闲",
+      "constraints": { "district": "裕华区" },
+      "relevant_attractions": ["世纪公园"],
+      "excluded_attractions": []
+    },
+    {
+      "id": "q8",
+      "query": "元氏 封龙山 风景区 登山",
+      "constraints": { "district": "元氏县" },
+      "relevant_attractions": ["封龙山风景区"],
+      "excluded_attractions": []
+    }
+  ]
+}

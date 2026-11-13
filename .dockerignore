@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# 虚拟环境（避免宿主机的 Windows venv 覆盖镜像内 Linux venv）
+.venv/
+venv/
+
+# 密钥与本地环境
+.env
+.env.local
+*.pem
+*.key
+
+# 缓存与测试产物
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# 版本控制
+.git/
+.gitignore
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# 数据库 / 运行时
+*.db
+*.sqlite3
+logs/
